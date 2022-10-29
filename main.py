@@ -138,9 +138,7 @@ def recursive_traverse(x, y, img):
         return
     else:
         recursive_traverse(next_x, next_y, img)
-
-#img = np.zeros([height, width], dtype=np.uint8)
-#cv2.imwrite('maze.png', maze.Maze(img, np.array([0, 0])).maze)
+        
 img = cv2.imread('maze.png', 1)
 out = img
 recursive_traverse(0, 0, img)
